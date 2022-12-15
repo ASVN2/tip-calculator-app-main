@@ -1,0 +1,265 @@
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  background-color: hsl(184deg, 14%, 56%);
+  font-weight: 700;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.colors {
+  color: hsl(183deg, 100%, 15%);
+  color: hsl(186deg, 14%, 43%);
+  color: hsl(184deg, 14%, 56%);
+  color: hsl(185deg, 41%, 84%);
+  color: hsl(189deg, 41%, 97%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tip-contianer {
+  max-width: 1200px;
+  border-radius: 10px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.tip-contianer .optinal-box {
+  flex: 1;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.tip-contianer .optinal-box.error .people input {
+  border-color: rgba(255, 99, 71, 0.618);
+}
+.tip-contianer .optinal-box.error .people .error {
+  opacity: 1;
+}
+.tip-contianer .input {
+  position: relative;
+}
+.tip-contianer .input .title-input {
+  margin-bottom: 15px;
+  color: hsl(183deg, 100%, 15%);
+}
+.tip-contianer .input input {
+  border: none;
+  background: hsl(180deg, 65%, 90%);
+  padding: 20px 10px;
+  height: 60px;
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 2.2rem;
+  color: hsl(183deg, 100%, 15%);
+  text-align: end;
+  border: 3px solid transparent;
+}
+.tip-contianer .input input::before {
+  position: absolute;
+  content: "$";
+  top: 0;
+  left: 0;
+}
+.tip-contianer .input input:focus {
+  outline: none;
+  border: 3px solid #26c2ad;
+}
+.tip-contianer .input input::-moz-placeholder {
+  color: hsl(184deg, 14%, 56%);
+  font-size: 35px;
+}
+.tip-contianer .input input:-ms-input-placeholder {
+  color: hsl(184deg, 14%, 56%);
+  font-size: 35px;
+}
+.tip-contianer .input input::placeholder {
+  color: hsl(184deg, 14%, 56%);
+  font-size: 35px;
+}
+.tip-contianer .input img {
+  width: 20px;
+  top: 60%;
+  position: absolute;
+  left: 15px;
+}
+.tip-contianer .tip-holder-amount {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+.tip-contianer .tip-amount {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background: hsl(183deg, 100%, 15%);
+  margin-bottom: 10px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+}
+.tip-contianer .tip-amount.active {
+  background-color: #26c2ad;
+  color: hsl(183deg, 100%, 15%);
+}
+.tip-contianer .title-tips {
+  color: hsl(183deg, 100%, 15%);
+  margin: 20px 0;
+}
+.tip-contianer input.tip-amount {
+  text-align: end;
+  padding: 10px 30px;
+  height: 60px;
+  color: hsl(186deg, 14%, 43%);
+  background-color: hsl(185deg, 41%, 84%);
+  border: 3px solid transparent;
+  color: hsl(183deg, 100%, 15%);
+}
+.tip-contianer input.tip-amount.active {
+  background-color: hsl(185deg, 41%, 84%);
+}
+.tip-contianer input.tip-amount:focus {
+  outline: none;
+  border: 3px solid #26c2ad;
+}
+.tip-contianer .people {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.tip-contianer .people img {
+  width: 30px;
+  top: 60%;
+  position: absolute;
+  left: 15px;
+}
+.tip-contianer .people .title-people {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 15px;
+}
+.tip-contianer .people .title-people .title {
+  color: hsl(186deg, 14%, 43%);
+}
+.tip-contianer .people .title-people .error {
+  transition: 0.3s;
+  color: tomato;
+  opacity: 0;
+}
+.tip-contianer .people input {
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(185deg, 41%, 84%);
+  padding: 0 15px;
+  text-align: end;
+  font-family: "Space Mono", monospace;
+  font-size: 34px;
+  font-weight: bold;
+  color: hsl(183deg, 100%, 15%);
+  border: 3px solid transparent;
+  position: relative;
+}
+.tip-contianer .people input::before {
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+}
+.tip-contianer .people input:focus {
+  outline: none;
+  border: 3px solid #26c2ad;
+}
+
+.resault-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 15px;
+  padding: 25px;
+}
+.resault-box .tips {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 60%;
+}
+.resault-box .tip-for-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resault-box .tip-for-one .text {
+  color: white;
+}
+.resault-box .tip-for-one .text span {
+  color: hsl(186deg, 14%, 43%);
+  font-size: 1.2rem;
+}
+.resault-box .tip-for-one .amount {
+  display: flex;
+  font-size: 2.5rem;
+  color: #26c2ad;
+}
+.resault-box .tip-for-all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resault-box .tip-for-all .text {
+  color: white;
+}
+.resault-box .tip-for-all .text span {
+  color: hsl(186deg, 14%, 43%);
+  font-size: 1.2 rem;
+}
+.resault-box .tip-for-all .amount {
+  display: flex;
+  font-size: 2.5rem;
+  color: #26c2ad;
+}
+.resault-box .reset {
+  width: 100%;
+  height: 60px;
+  background-color: #26c2ad;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  border: none;
+  border-radius: 5px;
+  align-items: flex-end;
+  color: hsl(183deg, 100%, 15%);
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  font-family: space Mono;
+}
+.resault-box .reset:focus {
+  outline: none;
+}
+.resault-box .reset:active {
+  transform: scale(0.97);
+  filter: brightness(1.4);
+}/*# sourceMappingURL=style.css.map */
